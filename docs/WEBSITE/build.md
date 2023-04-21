@@ -8,15 +8,15 @@ title: 网站构建说明
 
 ## MkDocs
 
-<details><summary>MkDocs 简介</summary>
+ <details><summary>MkDocs 简介</summary>
 
-[MkDocs](https://www.mkdocs.org/) 是一个基于 Python 的静态网站生成器，用于创建漂亮的文档网站。它使用 `Markdown` 语法编写文档，并提供了一些主题和插件来帮助用户创建具有吸引力和易于导航的文档网站。MkDocs 支持多种主题和插件，可以为文档网站添加各种功能，如搜索、导航、代码高亮等。MkDocs 还提供了一个开发服务器，可以在本地预览文档网站，并将其构建为静态HTML文件以供部署到Web服务器上。
+[MkDocs](https://www.mkdocs.org/) 是一个基于 Python 的静态网站生成器，用于创建漂亮的文档网站。它使用 `Markdown` 语法编写文档，并提供了一些主题和插件来帮助用户创建具有吸引力和易于导航的文档网站。MkDocs 支持多种主题和插件，可以为文档网站添加各种功能，如搜索、导航、代码高亮等。MkDocs 还提供了一个开发服务器，可以在本地预览文档网站，并将其构建为静态 HTML 文件以供部署到 Web 服务器上。
 
 </details>
 
 ### 安装MkDocs
 
-- 安装[Python](https://www.python.org/downloads/)
+- 安装 [Python](https://www.python.org/downloads/)
 - 使用 pip 工具来安装 MkDocs。打开命令提示符窗口（按下 Win+R 键，输入 "cmd"，然后按下 Enter 键），并输入以下命令：
     ```
     pip install mkdocs
@@ -241,22 +241,25 @@ git commit -m "init"
 
 #### GitHub 创建新仓库
 
-- 创建名为 `<username>.github.io` 的仓库
+- 创建名为 `<username>.github.io` 的仓库，例如 `ryuyal.github.io`
 - GitHub -> Repository -> Settings -> Actions -> General 设置：
     - Actions permissions: Allow all actions and reusable workflows
     - Workflow permissions: Read and write permissions
-- Save
+    - Save
 
+
+#### 推送到远端仓库
 ```
 git remote add origin git@github.com:ryuyal/ryuyal.github.io.git 
 git branch -M main
 git push -u origin main
-注意：这里如果出现错误： ! [rejected]        main -> main (fetch first)
+注意，这里如果出现错误：  ! [rejected]        main -> main (fetch first)
 error: failed to push some refs to 'github.com:ryuyal/ryuyal.github.io.git'
 这是远程库与本地库不一致造成的，先把远程库同步到本地库：
 git pull --rebase origin main
 然后再执行：
 git push -u origin main
 ```
+
 **GitHub Repository -> Settings -> Pages -> Branch -> gh-pages -> /(root) -> Save**
 
