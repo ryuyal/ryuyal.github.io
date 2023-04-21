@@ -1,1 +1,1 @@
-# ryuyal.github.io
+# Learning Journey
