@@ -8,11 +8,9 @@ title: 网站构建说明
 
 ## MkDocs
 
- <details><summary>MkDocs 简介</summary>
-
+ <!-- <details><summary>MkDocs 简介</summary> -->
 [MkDocs](https://www.mkdocs.org/) 是一个基于 Python 的静态网站生成器，用于创建漂亮的文档网站。它使用 `Markdown` 语法编写文档，并提供了一些主题和插件来帮助用户创建具有吸引力和易于导航的文档网站。MkDocs 支持多种主题和插件，可以为文档网站添加各种功能，如搜索、导航、代码高亮等。MkDocs 还提供了一个开发服务器，可以在本地预览文档网站，并将其构建为静态 HTML 文件以供部署到 Web 服务器上。
-
-</details>
+<!-- </details> -->
 
 ### 安装MkDocs
 
@@ -39,11 +37,9 @@ mkdocs serve
 
 ## Material for MkDocs
 
-<details> <summary>Material for MkDocs 简介</summary>
-
+<!-- <details> <summary>Material for MkDocs 简介</summary> -->
 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 是 MkDocs 的一种主题，它基于 [Google Material Design Guidelines](https://m2.material.io/design/guidelines-overview)，提供了一个现代、响应式和直观的用户界面，可以帮助用户创建漂亮的文档网站。Material for MkDocs 风格适用于各种类型的文档，如技术文档、API 文档、用户手册等。它提供了许多功能，如搜索框、侧边栏导航、可折叠的文本块、代码高亮等，可以使用户更轻松地浏览和理解文档。此外，Material for MkDocs 风格还具有响应式设计，可以自适应不同的设备和屏幕大小，从而提供最佳的用户体验。
-
-</details>
+<!-- </details> -->
 
 ### 安装 Material for MkDocs 主题：
 
