@@ -8,9 +8,27 @@ site_description: RyuYal's Learning Journey
 nav:
   - CS学习记录: #横向导航栏
     - CS/index.md 
-    - Linux:
-      - Linux讲座: CS/Linux/linux.md
-      - 命令行入门精简版: CS/Linux/commands-concise.md
+    # - Linux:
+    #   - Linux讲座: CS/Linux/linux.md
+    #   - 命令行入门精简版: CS/Linux/commands-concise.md
+    - 实用工具:
+      - MarkDown: CS/Tools/markd.md
+      - Git: CS/Tools/git.md
+      - GitHub: CS/Tools/github.md
+      - IDEA: CS/Tools/idea.md
+      - CLion: CS/Tools/clion.md
+      - VSCode: CS/Tools/vscode.md
+      - 科研相关: CS/Tools/research.md
+    
+    - 数据结构与算法:
+      - 数据结构与算法基础-青岛大学王卓老师: CS/Algos/ds_wangzhuo.md
+      - LeetCode: CS/Algos/lc_recommend.md
+    
+    - 操作系统:
+      - CS/OS/operating.md
+
+    - 计算机网络:
+      - CS/CSNetwork/csn.md
     
   - 英语:
     - ENGLISH/index.md
