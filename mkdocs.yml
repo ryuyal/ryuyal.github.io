@@ -32,7 +32,10 @@ nav:
     
   - 英语:
     - ENGLISH/index.md
-  
+    - 词汇:
+      - 背单词软件: ENGLISH/Words/words.md
+      - 词汇量记录: ENGLISH/Words/num_record.md
+
   - 西班牙语:
     - SPANISH/index.md
 
