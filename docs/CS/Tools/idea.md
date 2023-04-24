@@ -3,13 +3,13 @@
 <details>
 <summary>JDK-JRE-JVM</summary>
 
-JDK、JRE 和 JVM 是 Java 开发和运行环境中的三个重要概念。
+JDK、JRE 和 JVM 是 Java 开发和运行环境中的三个重要概念。<br>
 
-JDK（Java Development Kit）是 Java 开发工具包，它是开发 Java 应用程序所必需的软件环境。JDK 包含了 JRE、Java 开发工具（例如编译器和调试器）、Java 类库和其他支持文件。如果需要进行 Java 应用程序的开发工作，就需要安装 JDK。
+JDK（Java Development Kit）是 Java 开发工具包，它是开发 Java 应用程序所必需的软件环境。JDK 包含了 JRE、Java 开发工具（例如编译器和调试器）、Java 类库和其他支持文件。如果需要进行 Java 应用程序的开发工作，就需要安装 JDK。<br>
 
-JRE（Java Runtime Environment）是 Java 运行环境，它是运行 Java 应用程序所必需的软件环境。JRE 包含了 Java 虚拟机（JVM）、Java 类库和其他支持文件。如果只是需要运行 Java 应用程序，而不需要进行 Java 开发工作，那么安装 JRE 就足够了。
+JRE（Java Runtime Environment）是 Java 运行环境，它是运行 Java 应用程序所必需的软件环境。JRE 包含了 Java 虚拟机（JVM）、Java 类库和其他支持文件。如果只是需要运行 Java 应用程序，而不需要进行 Java 开发工作，那么安装 JRE 就足够了。<br>
 
-JVM（Java Virtual Machine）是 Java 虚拟机，它是 Java 运行环境的核心组件之一。JVM 可以将 Java 代码编译成字节码，然后在各种计算机平台上运行。JVM 负责解释字节码并将其转换成本地机器指令，以便计算机可以执行 Java 应用程序。
+JVM（Java Virtual Machine）是 Java 虚拟机，它是 Java 运行环境的核心组件之一。JVM 可以将 Java 代码编译成字节码，然后在各种计算机平台上运行。JVM 负责解释字节码并将其转换成本地机器指令，以便计算机可以执行 Java 应用程序。<br>
 
 因此，JDK 包含了 JRE 和开发工具，JRE 包含了 JVM，JVM 是 Java 运行环境的核心，它为 Java 应用程序提供了跨平台的能力。
 
