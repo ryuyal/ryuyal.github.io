@@ -68,3 +68,12 @@ JVM（Java Virtual Machine）是 Java 虚拟机，它是 Java 运行环境的核
 - 在IDEA中创建新项目，并为该项目创建Git仓库（创建仓库之后所有的文件都会变红，代表还没通过 `Add` 操作添加到暂存区）
 - 左上角选择 `Git->Manage Remote`，然后添加远程（URL为GitHub上项目的地址）
 - 新建文件`Add->Commit->Push`
+
+### 新建分支
+项目开发中一般需要新建分支,在自己的分支上进行代码编写和修改
+发生冲突时的两种解决方法：
+- rebase
+- merge
+
+### Pull Request
+to be continued......
