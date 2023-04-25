@@ -8,7 +8,7 @@ title: 个人履历
 > 
 > 更新于 2023.3.4
 
-<!-- [通用简历 PDF](./files/cv-yxj.pdf) -->
+[通用简历 PDF](./files/cv-yxj.pdf)
 
 ## 基本信息
 
