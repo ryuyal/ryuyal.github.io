@@ -1,12 +1,15 @@
 ---
-title: 动态规划
+title: 个人履历
 ---
 
 # 动态规划
 
-[视频教程](https://youtu.be/oBt53YbR9Kk)
+> [视频教程](https://youtu.be/oBt53YbR9Kk)
 
-下面是根据视频教程做的笔记（PDF版）：
+<!-- 个人简历test：
+[通用简历 PDF](./files/cv-yxj.pdf) -->
+
+动态规划notes：
 [动态规划笔记 PDF](./ds_notes/dp.pdf)
 
 ## 动态规划LeetCode题目练习
