@@ -243,7 +243,6 @@ git commit -m "init"
     - Workflow permissions: Read and write permissions
     - Save
 
-
 #### 推送到远端仓库
 ```
 git remote add origin git@github.com:ryuyal/ryuyal.github.io.git 
