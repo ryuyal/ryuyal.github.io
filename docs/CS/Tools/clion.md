@@ -31,4 +31,4 @@ Create Associations 设置为一些文件的默认打开方式
 1. 首先创建 .cpp文件，在 CMakeLists.txt 文件中添加 `add_executable(文件名 文件名.cpp)`
 2. 如果一个项目中有子文件夹可以在子文件夹中，先在主项目的 CMakeLists.txt 文件中添加 `add_subdirectory(子文件夹)` ，然后在子文件夹中创建 CMakeLists.txt 文件，通过`add_executable()` 进行对应的文件编译
 3. 右侧第三行是在 function.cpp 中引用了 exchange.cpp 中的函数
-4. 第四行是在 pointer.cpp 主函数文件中引用了exchange.cpp中的函数`
+4. 第四行是在 pointer.cpp 主函数文件中引用了exchange.cpp中的函数
