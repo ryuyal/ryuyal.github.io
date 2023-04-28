@@ -69,7 +69,7 @@
     searchWord()
     searchPrefix()
     // 时间复杂度均为 word.length
-    ````
+    ```
 
 ## Stack
 - 常用method，时间复杂度均为O(1)
