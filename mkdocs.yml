@@ -11,6 +11,7 @@ nav:
     # - Linux:
     #   - Linux讲座: CS/Linux/linux.md
     #   - 命令行入门精简版: CS/Linux/commands-concise.md
+    - Crash Course Computer Science: CS/cccs.md
     - 实用工具:
       - MarkDown: CS/Tools/markd.md
       - Git: CS/Tools/git.md
