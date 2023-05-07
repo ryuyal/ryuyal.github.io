@@ -220,7 +220,8 @@
 > 具有“多对多”逻辑关系数据的结构
 
 图的表示主要有两种方式：
-- 邻接表
+
+- 邻接表：
     ``` 
     // 方式一
     List[] graph = new ArrayList[4];
@@ -244,7 +245,8 @@
     graph2.get(2).add(1); graph2.get(2).add(3);
     graph2.get(3).add(2); graph2.get(3).add(0);
     ```
-- 邻接矩阵
+
+- 邻接矩阵：
     ```
     boolean[][] graph3 = new boolean[4][4];
     for (int i = 0; i < 4; i++){
