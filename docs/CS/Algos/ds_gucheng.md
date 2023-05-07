@@ -11,9 +11,10 @@
     - 树（Tree）
     - 堆（Heap）
 
-- 常考：Array, String, LinkedList, Tree(BT, BST), Stack, Queue, PriorityQueue(Heap), HashMap, HashSet
-- 少考：Trie, Disjoint-Set(Union Find), Deque, Graph
-- 一般不考，但是用来一题多解更快：TreeMap, TreeSet, Segment Tree(zkw Tree), Binary Index Tree(Fenwick Tree)
+- **常考：**`Array, String, LinkedList, Tree(BT, BST), Stack, Queue, PriorityQueue(Heap), HashMap, HashSet`
+- 少考：`Trie, Disjoint-Set(Union Find), Deque, Graph`
+- 一般不考，但是用来一题多解更快：`TreeMap, TreeSet, Segment Tree(zkw Tree), Binary Index Tree(Fenwick Tree)`
+
 - Java中的集合体系结构
     ![](./ds_notes/collections.png)
 
@@ -78,6 +79,7 @@
 > 甲骨文官方doc推荐使用 `Deque` 来代替Stack，因为内部实现更合理，**Vector vs Queue interface**。`Deque<Integer> stack = new ArrayDeque<Integer>();`
 > 
 > `Stack<Integer> stack = new Stack<>();` 也可
+
 - 常用method，时间复杂度均为O(1)
     ```
     stack.push(num)
@@ -127,6 +129,25 @@
     pq.peek(); // return 0, 时间复杂度O(1)
     pq.poll(); // return 0, 时间复杂度O(logn)
     pq.poll(); // return 1, 时间复杂度O(logn)
+    ```
+
+    ```
+    /*
+    自定义排序规则的优先队列
+    (1) 按单词出现频率从大到小排列
+    (2) 出现频率相同的单词按字典序排列
+
+    输出优先队列的前K个 即为答案
+        */
+    PriorityQueue<Map.Entry<String, Integer>> queue = new PriorityQueue<>(new Comparator<Map.Entry<String, Integer>>() {
+        @Override
+        public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+            if (Objects.equals(o1.getValue(), o2.getValue())){ // 出现次数相同时
+                return o1.getKey().compareTo(o2.getKey()); // 字典序
+            }
+            return o2.getValue() - o1.getValue();
+        }
+    });
     ```
 - pq的应用和array手动实现heap
 
@@ -189,3 +210,63 @@
     ```
 
 ### Disjoint-Set(Union Find) 并查集
+> 并查集是一种树型的数据结构，用于处理一些不相交集合的合并（union）及查询（find）问题
+
+两种操作：
+- 合并（Union）：把两个不相交的集合合并为一个集合。
+- 查询（Find）：查询两个元素是否在同一个集合中。
+
+### Graph 图
+> 具有“多对多”逻辑关系数据的结构
+
+图的表示主要有两种方式：
+- 邻接表
+    ``` 
+    // 方式一
+    List[] graph = new ArrayList[4];
+    for(int i = 0; i < graph.length; i++){
+        graph[i] = new ArrayList<>();
+    }
+    graph[0].add(1); graph[0].add(3);
+    graph[1].add(2); graph[1].add(0);
+    graph[2].add(1); graph[2].add(3);
+    graph[3].add(0); graph[3].add(2);
+    System.out.println(graph[0].toString());
+    System.out.println(graph[1].toString());
+
+    // 方式二
+    Map<Integer, List<Integer>> graph2 = new HashMap<>();
+    for(int i = 0; i < 4; i++){
+        graph2.put(i, new ArrayList<>());
+    }
+    graph2.get(0).add(1); graph2.get(0).add(3);
+    graph2.get(1).add(2); graph2.get(1).add(0);
+    graph2.get(2).add(1); graph2.get(2).add(3);
+    graph2.get(3).add(2); graph2.get(3).add(0);
+    ```
+- 邻接矩阵
+    ```
+    boolean[][] graph3 = new boolean[4][4];
+    for (int i = 0; i < 4; i++){
+        graph3[i][i] = true;
+    }
+    graph3[0][1] = true; graph3[0][3] = true;
+    graph3[1][2] = true; graph3[1][0] = true;
+    graph3[2][1] = true; graph3[2][3] = true;
+    graph3[3][2] = true; graph3[3][0] = true;
+    System.out.println("     0     1     2     3");
+    for (int i = 0; i < 4; i++){
+        System.out.println(i + " " + Arrays.toString(graph3[i]));
+    }
+    ```
+![](./ds_notes/ds_graph.jpg)
+图的考察：基本的BFS、DFS、拓扑排序等。深入学习可考虑最短路径、最小生成树等。
+
+### Segment Tree 线段树
+![](./ds_notes/ds_segment_tree.jpg)
+
+### Binary Index Tree(Fenwick tree) 树状数组
+![](./ds_notes/ds_bit.jpg)
+
+### Summary
+![](./ds_notes/ds_overview.jpg)
