@@ -32,3 +32,32 @@ Create Associations 设置为一些文件的默认打开方式
 2. 如果一个项目中有子文件夹可以在子文件夹中，先在主项目的 CMakeLists.txt 文件中添加 `add_subdirectory(子文件夹)` ，然后在子文件夹中创建 CMakeLists.txt 文件，通过`add_executable()` 进行对应的文件编译
 3. 右侧第三行是在 function.cpp 中引用了 exchange.cpp 中的函数
 4. 第四行是在 pointer.cpp 主函数文件中引用了exchange.cpp中的函数
+
+### 通过Git管理以及连接GitHub
+
+#### 方式一
+- 创建项目以及通过Git进行版本控制
+
+1. CLion中创建新项目
+2. VCS$\rightarrow$Create Git Repository
+3. 右键cmake-build-debug$\rightarrow$Git$\rightarrow$Add to .gitignore
+4. 同理，将不需要进行版本控制or上传到GitHub的文件添加到.gitignore文件中
+
+- 将项目文件上传到GitHub
+  
+1. 在GitHub中创建Repo
+2. CLion中Git$\rightarrow$Manage Remotes$\rightarrow$
+3. 选择+，name: origin, url: GitHub中Repo的SSH链接
+4. 在主文件夹下的CMakeLists.txt文件中添加子文件夹`add_subdirectory(dirname)`
+5. 在`dirname`文件夹中创建CMakeLists.txt文件，通过`add_executable(filename filename.cpp)`添加可执行.cpp文件
+6. Git$\rightarrow$Add$\rightarrow$Commit$\rightarrow$Push
+
+> 注意：这种方式Push的时候要选择origin->main
+
+#### 方式二
+1. 先在GitHub中创建Repo
+2. CLion中直接从GitHub中导入项目
+3. 创建CMakeList.txt，点击Load CMake Project，之后会自动创建cmake-build-debug文件夹，将该文件夹加入到gitignore文件
+4. 新建文件并编写代码
+5. 配置CMakeLists.txt
+6. Git$\rightarrow$Add$\rightarrow$Commit$\rightarrow$Push
