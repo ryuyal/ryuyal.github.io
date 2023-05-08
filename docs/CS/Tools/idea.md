@@ -35,7 +35,7 @@ JVM（Java Virtual Machine）是 Java 虚拟机，它是 Java 运行环境的核
 2. 有**社区版**（Community Edition-开源，免费）和**旗舰版**（Ultimate Edition，免费试用30天）两种可选。
    
    > 在校学生可以通过校园邮箱注册 JetBrains 账号，免费激活使用 IDEA、CLion、Pycharm、GoLand 等。
-   
+
 3. 下载好之后双击，更改安装路径（一般不安装在 C 盘，且路径最好不要包含中文）
 
 ## IDEA中创建新项目
@@ -74,6 +74,7 @@ JVM（Java Virtual Machine）是 Java 虚拟机，它是 Java 运行环境的核
 ### 新建分支
 项目开发中一般需要新建分支,在自己的分支上进行代码编写和修改
 发生冲突时的两种解决方法：
+
 - rebase
 - merge
 
