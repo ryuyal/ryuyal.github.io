@@ -35,6 +35,7 @@ JVM（Java Virtual Machine）是 Java 虚拟机，它是 Java 运行环境的核
 2. 有**社区版**（Community Edition-开源，免费）和**旗舰版**（Ultimate Edition，免费试用30天）两种可选。
    
    > 在校学生可以通过校园邮箱注册 JetBrains 账号，免费激活使用 IDEA、CLion、Pycharm、GoLand 等。
+   
 3. 下载好之后双击，更改安装路径（一般不安装在 C 盘，且路径最好不要包含中文）
 
 ## IDEA中创建新项目
@@ -51,6 +52,7 @@ JVM（Java Virtual Machine）是 Java 虚拟机，它是 Java 运行环境的核
 
 ## IDEA项目配置Git并关联到GitHub
 **官方文档：**
+
 - 版本控制系统：<https://www.jetbrains.com.cn/help/idea/version-control-integration.html>
 - Git：<https://www.jetbrains.com.cn/help/idea/using-git-integration.html>
 
