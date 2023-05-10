@@ -45,6 +45,10 @@ nav:
 
   - 兴趣爱好:
     - HOBBY/index.md
+    - 诗歌:
+      - 诗歌: HOBBY/Poems/poems.md
+    - 阅读:
+      - 阅读记录: HOBBY/Reading/readinglist.md
     - 网球: 
       - 网球规则: HOBBY/Tennis/tennis-rules.md
       - WTA:
