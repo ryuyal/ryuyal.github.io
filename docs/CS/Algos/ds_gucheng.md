@@ -1,6 +1,7 @@
 # 数据结构(Java)
 
-## 基础数据结构
+## 基础数据结构入门
+
 - 数据结构分类：
     - 数组（Array）
     - 栈（Stack）
@@ -74,6 +75,13 @@
     searchPrefix()
     // 时间复杂度均为 word.length
     ```
+
+- 应用：
+  - 自动补全
+  - 拼写检查
+  - IP路由
+  - 九键打字预测
+  - 词频统计
 
 ### Stack栈 Last In First Out(LIFO) or First In Last Out(FILO)
 > 甲骨文官方doc推荐使用 `Deque` 来代替Stack，因为内部实现更合理，**Vector vs Queue interface**。`Deque<Integer> stack = new ArrayDeque<Integer>();`
@@ -273,3 +281,89 @@
 
 ### Summary
 ![](./ds_notes/ds_overview.jpg)
+
+## 基础数据结构
+
+### Trie
+
+**模板：**
+```
+class TrieNode{
+    TrieNode[] children;
+    boolean isWord;
+    public TrieNode(){
+        children = new TrieNode[26];
+    }
+}
+class Trie{
+    TrieNode root;
+    public Trie(){
+        root = new TrieNode();
+    }
+
+    public void insert(String word){
+        TrieNode node = root;
+        for(char c : word.toCharArray()){
+            if(node.children[c - 'a'] == null){
+                node.children[c - 'a'] = new TrieNode();
+            }
+            node = node.children[c - 'a'];
+        }
+        node.isWord = true;
+    }
+
+    public boolean search(String word){
+        TrieNode node = root;
+        for(char c : word.toCharArray()){
+            if(node.children[c - 'a'] == null){
+                return false;
+            }
+            node = node.children[c - 'a'];
+        }
+        return node.isWord;
+    }
+
+    public boolean startsWith(String prefix){
+        TrieNode node = root;
+        for(char c : prefix.toCharArray()){
+            if(node.children[c - 'a'] == null){
+                return false;
+            }
+            node = node.children[c - 'a'];
+        }
+        return true;
+    }
+}
+```
+
+### Union Find并查集
+
+### Heap
+
+### 栈 队列实现
+
+### 链表 反转+合并+找环
+
+### 链表 删除+复制+结构转换
+
+### Comparator比较器
+
+## 基础算法
+
+### 扫描线
+
+> 以数飞机为例：
+> 思路一：暴力扫描。遍历每个时刻，检测每个时刻有多少个飞机
+> 思路二：扫描线。不需要检测每一时刻，只需要检测起点或者终点的位置（交点变化的位置只有起点或终点）
+
+### BFS
+
+### DFS
+
+### 二分搜索
+
+### 分治法
+
+### 单调栈
+
+### 单调队列
