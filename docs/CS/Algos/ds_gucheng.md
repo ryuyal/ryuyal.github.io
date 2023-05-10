@@ -19,6 +19,8 @@
 - Java中的集合体系结构
     ![](./ds_notes/collections.png)
 
+---
+
 ### Array数组
 > 适用场景：频繁查询，对存储空间要求不大，很少增加和删除的情况。
 
@@ -28,6 +30,7 @@
     int[]nums = new int[10];
     System.out.println(Arrays.toString(nums));
     ```
+---
 
 ### String字符串——non primitive data type
 - primitive type指的是：boolean, int, char, double, long, byte, short, float
@@ -39,6 +42,8 @@
     str.charAt(index);
     str1.compareTo(str2);
     ```
+---
+
 ### Linked List链表
 
 - 常用method，赋值取值时间复杂度均为 O(1)
@@ -48,6 +53,8 @@
     head.val; // 取值
     ```
 适用场景：数据量比较小，需要频繁增加、删除操作的场景
+
+---
 
 ### Tree树
 
@@ -61,6 +68,7 @@
         }
     }
     ```
+---
 
 ### Trie 前缀树或字典树 
 字典树的性质：
@@ -83,6 +91,8 @@
   - 九键打字预测
   - 词频统计
 
+---
+
 ### Stack栈 Last In First Out(LIFO) or First In Last Out(FILO)
 > 甲骨文官方doc推荐使用 `Deque` 来代替Stack，因为内部实现更合理，**Vector vs Queue interface**。`Deque<Integer> stack = new ArrayDeque<Integer>();`
 > 
@@ -97,6 +107,8 @@
     ```
 - DFS
 
+---
+
 ### Queue队列 First In First Out(FIFO)
 > `Queue<Integer> queue = new LinkedList<>();`
 
@@ -108,6 +120,8 @@
     queue.poll();
     ```
 - BFS
+
+---
 
 ### Deque双端队列（Double-ended queue）
 > `Deque<Integer> deque = new ArrayDeque<>();`
@@ -123,6 +137,8 @@
     deque.pollFirst(); // return 0, 剩下1->2
     deque.pollLast(); // return 2
     ```
+
+---
 
 ### PriorityQueue(Heap) 堆(最大堆，最小堆)
 > 最大堆和最小堆的差别在于节点的排序方式。最大堆中，父节点的值比每一个子节点的值都要大。最小堆中，父节点的值比每一个子节点的值都要小。Java中`PriorityQueue`默认最小堆
@@ -159,6 +175,8 @@
     ```
 - pq的应用和array手动实现heap
 
+---
+
 ### Map散列表, 哈希表
 > key和value之间的映射
 > 
@@ -180,6 +198,8 @@
 
 - 查找比纯链表快，插入删除比纯数组快
 
+---
+
 ### Set
 > HashSet底层使用HashMap来保存所有元素
 > 
@@ -193,6 +213,8 @@
     set.contains(3); // return false
     ```
 
+---
+
 ### TreeMap
 > 和HashMap用法几乎一致，但是提供了key本身有顺序，可以对元素进行排序操作
 
@@ -204,6 +226,8 @@
     higherKey() // >
     ceilingKey() // >=
     ```
+
+---
 
 ### TreeSet
 > 几乎和HashSet一样，唯一区别是element现在有顺序了
@@ -217,6 +241,8 @@
     ceiling(num);
     ```
 
+---
+
 ### Disjoint-Set(Union Find) 并查集
 > 并查集是一种树型的数据结构，用于处理一些不相交集合的合并（union）及查询（find）问题
 
@@ -224,6 +250,8 @@
 
 - 合并（Union）：把两个不相交的集合合并为一个集合。
 - 查询（Find）：查询两个元素是否在同一个集合中。
+
+---
 
 ### Graph 图
 > 具有“多对多”逻辑关系数据的结构
@@ -273,14 +301,22 @@
 ![](./ds_notes/ds_graph.jpg)
 图的考察：基本的BFS、DFS、拓扑排序等。深入学习可考虑最短路径、最小生成树等。
 
+---
+
 ### Segment Tree 线段树
 ![](./ds_notes/ds_segment_tree.jpg)
+
+---
 
 ### Binary Index Tree(Fenwick tree) 树状数组
 ![](./ds_notes/ds_bit.jpg)
 
+---
+
 ### Summary
 ![](./ds_notes/ds_overview.jpg)
+
+---
 
 ## 基础数据结构
 
@@ -336,17 +372,158 @@ class Trie{
 }
 ```
 
+---
+
 ### Union Find并查集
+
+![](./ds_notes/ds_unionfind.jpg)
+
+**模板：**
+```
+class DSU{
+    int[] parent;
+    public DSU(int N){
+        parent = new int[N];
+        for(int i = 0; i < N; i++){
+            parent[i] = i; // 所有节点独立
+        }
+        // parent[i]代表i节点对应的的父节点（root）
+    }
+
+    // with path compression
+    public int find(int x){
+        if(parent[x] != x){ // 说明该节点不是父节点
+            parent[x] = find(parent[x]);
+        }
+        return parent[x];
+    }
+    public void union(int x, int y){
+        parent[find(x)] = find(y); // x的父节点依附到y的父节点
+    }
+}
+```
+
+
+**Improved with size(weighted)**——节点数少的树合并到节点数多的树上
+    ![](./ds_notes/ds_unionfind2.jpg)
+
+```
+class DSU{
+    int[] parent;
+    int[] size; // 当前Node所在的group所包含的节点数
+
+    public DSU(int N){
+        parent = new int[N];
+        size = new int[N];
+        for(int i = 0; i < N; i++){
+            parent[i] = i;
+        }
+        Arrays.fill(size, 1);
+    }
+
+    public int find(int x){
+        if(parent[x] != x){
+            parent[x] = find(parent[x]);
+        }
+        return parent[x];
+    }
+
+    public void union(int x, int y){
+        int rootX = find(x), rootY = find(y);
+
+        if(rootX == rootY){ // 说明两个节点在同一个group
+            return;
+        }
+
+        if(size[rootX] <= size[rootY]){
+            parent[rootX] = rootY; // rootY作为新的parent
+            size[rootY] += size[rootX];
+        }else if(size[rootX] > size[rootY]){
+            parent[rootY] = rootX; // rootX作为新的parent
+            size[rootX] += size[rootY]; 
+        }
+
+    }
+}
+
+```
+
+**Improved with ranked**——高度低的树祥高度高的树合并
+    ![](./ds_notes/ds_unionfind3.jpg)
+
+```
+class DSU{
+    int[] parent;
+    int[] rank; // 
+
+    public DSU(int N){
+        parent = new int[N];
+        rank = new int[N];
+        for(int i = 0; i < N; i++){
+            parent[i] = i;
+        }
+        Arrays.fill(rank, 1);
+    }
+
+   
+    public int find(int x){
+        if(parent[x] != x){
+            parent[x] = find(parent[x]);
+        }
+        return parent[x];
+    }
+
+
+    public void union(int x, int y){
+        int rootX = find(x), rootY = find(y);
+
+        if(rootX == rootY){ // 说明两个节点在同一个group
+            return;
+        }
+
+        if(rank[rootX] < rank[rootY]){
+            parent[rootX] = rootY; // rootY作为新的parent
+        }else if(rank[rootX] > rank[rootY]){
+            parent[rootY] = rootX; // rootX作为新的parent
+        }else{ // rank相等，需要维护rank
+            parent[rootX] = rootY;
+            rank[rootY]++;
+        }
+
+    }
+}
+```
+
+**并查集时间复杂度**
+    ![](./ds_notes/ds_unionfind4.jpg)
+
+> m个Union or Find的操作，应用于n个元素上，整体的时间复杂度为 O(m log*n)
+
+---
 
 ### Heap
 
+---
+
 ### 栈 队列实现
+
+---
 
 ### 链表 反转+合并+找环
 
+---
+
 ### 链表 删除+复制+结构转换
 
+---
+
 ### Comparator比较器
+
+---
+
+## 高级数据结构
+
+---
 
 ## 基础算法
 
@@ -356,14 +533,32 @@ class Trie{
 > 思路一：暴力扫描。遍历每个时刻，检测每个时刻有多少个飞机
 > 思路二：扫描线。不需要检测每一时刻，只需要检测起点或者终点的位置（交点变化的位置只有起点或终点）
 
+---
+
 ### BFS
+
+---
 
 ### DFS
 
+---
+
 ### 二分搜索
+
+---
 
 ### 分治法
 
+---
+
 ### 单调栈
 
+---
+
 ### 单调队列
+
+---
+
+## 高级算法
+
+---
