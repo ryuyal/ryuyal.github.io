@@ -502,10 +502,24 @@ class DSU{
 ---
 
 ### Heap
+(Binary) Heap是平衡二叉树的特例，root节点的值与children比较，并且根据比较结果安排位置
+
+- Min-Heap
+- Max-Heap
+
+使用数组存储节点值（根节点存储在数组下标为0的位置，依次类推），下标为k的节点左孩子下标为`2k+1`，右孩子节点为`2k+2`；下标为k的节点其父节点下标为`(k-1)/2`
+
+**Heapify Definition**
+    ![](./ds_notes/ds_heapify.jpg)
+  
+**PriorityQueue**
 
 ---
 
 ### 栈 队列实现
+
+- Stack栈 Last In First Out or First In Last Out
+- Queue队列 First In First Out
 
 ---
 
