@@ -521,6 +521,9 @@ class DSU{
 - Stack栈 Last In First Out or First In Last Out
 - Queue队列 First In First Out
 
+**Summary**
+    ![](./ds_notes/ds_stack_queue.jpg)
+
 ---
 
 ### 链表 反转+合并+找环
