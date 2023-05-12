@@ -528,7 +528,77 @@ class DSU{
 
 ### 链表 反转+合并+找环
 
----
+![](./ds_notes/ds_linkedlist.png)
+
+- 单链表，双链表，循环链表
+- 核心操作：插入、删除、查找（遍历）
+
+**单链表**
+```
+    class ListNode{
+        int val;
+        ListNode next;
+        ListNode(int val){
+            this.val = val;
+        }
+    }
+```
+
+**双向链表**
+```
+class ListNode{
+    int val;
+    ListNode next;
+    ListNode prev;
+    ListNode(int val){
+        this.val = val;
+    }
+}
+```
+
+
+1. 常用reverse linkedlist的method，recursive or iterative
+    ```
+    public ListNode reverseLsit(ListNode head){
+        ListNode newHead = null;
+        ListNode cur = head;
+        while(cur != null){
+            ListNode next = cur.next;
+            cur.next = newHead;
+            newHead = cur;
+            cur = next;
+        }
+        return newHead;
+    }
+    ```
+
+2. 链表找环的基本方式
+    ```
+    public ListNode detectCycle(ListNode head){
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if(slow == fast){
+                fast = head;
+                while(slow != fast){
+                    slow = slow.next;
+                    fast = fast.next;
+                }
+                return slow;
+            }
+        }
+        return null;
+    }
+    ```
+
+> 即使是排好序的数组，用二分查找的时间复杂度也是O(logn)。正确的表述是，数组支持随机访问，根据下标随机访问的时间复杂度为O(1)
+
+> 如果代码对内存的使用非常苛刻，就更适合用数组。因为链表中的每个节点都需要消耗额外的存储空间去存储一份指向下一个节点的指针
+
 
 ### 链表 删除+复制+结构转换
 
