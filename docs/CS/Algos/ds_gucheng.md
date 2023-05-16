@@ -605,6 +605,50 @@ class ListNode{
 ---
 
 ### Comparator比较器
+**Comparator 和 Comparable**
+
+Java中，对集合对象或者数组对象排序，有两种实现方式：
+
+1. 对象实现Comparable接口
+2. 定义**比较器**，实现Comparator接口。
+
+    ```
+    class Person implements Comparable<Person>{
+        @Override
+        public int compareTo(Person person){
+            return name.compareTo(person.name);
+            // return this.name - person.name;
+        }
+    }
+    ```
+
+    ```
+    Collections.sort(people, new Comparator<Person>(){
+        @Override
+        public int compare(Person a, Person b){
+            return a.age < b.age ? -1 : a.age == b.age ? 0 : 1;
+        }
+    })
+    ```
+    
+    ![](./ds_notes/ds_comparablee.png)
+
+    ![](./ds_notes/ds_comparator.png)
+
+    ![](./ds_notes/ds_diff_coms.png)
+
+**Design Patterns - Strategy Pattern**
+
+![](./ds_notes/ds_strategypattern.png)
+
+**equals() 和 hashcode()**
+
+![](./ds_notes/ds_equalsandhashcode.png)
+![](./ds_notes/ds_equalsandhashcode2.png)
+
+**Summary**
+
+![](./ds_notes/ds_comps_summary.png)
 
 ---
 
