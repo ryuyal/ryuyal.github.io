@@ -665,11 +665,70 @@ Java中，对集合对象或者数组对象排序，有两种实现方式：
 > 思路二：扫描线。不需要检测每一时刻，只需要检测起点或者终点的位置（交点变化的位置只有起点或终点）
 
 **Summary**
-![](./ds_notes/ds_sweepline_summary.png)
+![](./algos_notes/algo_sweepline_summary.png)
+
 ---
 
-### BFS
+### BFS(Breadth Frist Search)广度优先搜索
 
+**BFS一般用来：**
+
+1. 遍历树结构（level order）
+2. 遍历图结构（BFS，Topological）
+3. 遍历二维数组
+
+![](./algos_notes/algo_bfs1.png)
+
+![](./algos_notes/algo_bfs2.png)
+
+```
+procedure BFS(G, v):
+    create a queue Q
+    enqueue v onto Q
+    mark v
+    while Q is not empty:
+        t ⬅ Q.dequeue()
+        if t is what we are looking for:
+            return t
+        for all edges e in G.adjacentEdges(t) do
+            u ⬅ G.adjacentVertex(t, e)
+            if u is not marked:
+                mark u
+                enqueue u onto Q
+```
+
+```
+// 计算从起点 start 到终点 target的最近距离
+int BFS(Node start, Node target){
+    Queue<Node> q; // 核心数据结构
+    Set<Node> visited; // 避免走回头路
+
+    q.offer(start); // 将起点加入队列
+    visited.add(start); 
+    int step = 0; // 记录扩散的步数
+
+    while(q not empty){
+        int sz = q.size();
+        // 将当前队列中的所有节点向四周扩散
+        for(int i = 0; i < sz; i++){
+            Node cur = q.poll();
+            // 划重点: 这里判断是否到达终点
+            if(cur is target){
+                return step;
+            }
+            // 将cur 的相邻节点加入队列
+            for(Node x : cur.adj()){
+                if(x not in visited){
+                    q.offer(x);
+                    visited.add(x);
+                }
+            }
+        }
+        // 划重点 更新步数在这里
+        step++;
+    }
+}
+```
 ---
 
 ### DFS
