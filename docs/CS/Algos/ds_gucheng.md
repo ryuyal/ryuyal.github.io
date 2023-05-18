@@ -729,6 +729,11 @@ int BFS(Node start, Node target){
     }
 }
 ```
+
+**双向BFS**
+
+![](./algos_notes/algo_dual_bfs.png)
+
 ---
 
 ### DFS
