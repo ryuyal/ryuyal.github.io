@@ -734,6 +734,19 @@ int BFS(Node start, Node target){
 
 ![](./algos_notes/algo_dual_bfs.png)
 
+**Dijkstra**
+
+...
+
+**BFS in Topological Sort(拓扑排序)**
+![](./algos_notes/algo_bfs3.png)
+
+![](./algos_notes/algo_bfs4.jpg)
+
+
+**Summary 时间空间复杂度都是O(n)** 
+![](./algos_notes/algo_bfs_summary.png)
+
 ---
 
 ### DFS
