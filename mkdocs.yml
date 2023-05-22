@@ -39,8 +39,8 @@ nav:
       - 计算机网络-自顶向下方法: CS/CSNetwork/computer_networking_a_top-down_approach.md
     
     - 网络编程:
-      - TCP/IP网络编程: CS/NetworkProgramming/tcpip.md
-      - Linux高性能服务器编程: CS/NetworkProgramming/linux_sercer.md
+      - TCP/IP网络编程: CS/NetworkProgramming/tcpip_np.md
+      - Linux高性能服务器编程: CS/NetworkProgramming/linux_server.md
       
   - 英语:
     - ENGLISH/index.md
