@@ -29,11 +29,19 @@ nav:
       - 动态规划: CS/Algos/dynamic_programming.md
     
     - 操作系统:
-      - CS/OS/operating.md
+      - 深入理解计算机系统-CSAPP: CS/OS/computer_system.md
+      - 现代操作系统: CS/OS/operating.md
 
     - 计算机网络:
-      - CS/CSNetwork/csn.md
+      - 计算机网络微课堂: CS/CSNetwork/csn.md
+      - 图解HTTP: CS/CSNetwork/tujie_http.md
+      - 图解TCP/IP: CS/CSNetwork/tujie_tcpip.md
+      - 计算机网络-自顶向下方法: CS/CSNetwork/computer_networking_a_top-down_approach.md
     
+    - 网络编程:
+      - TCP/IP网络编程: CS/NetworkProgramming/tcpip.md
+      - Linux高性能服务器编程: CS/NetworkProgramming/linux_sercer.md
+      
   - 英语:
     - ENGLISH/index.md
     - 词汇:
