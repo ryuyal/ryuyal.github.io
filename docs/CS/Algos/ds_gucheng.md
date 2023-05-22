@@ -778,6 +778,7 @@ int BFS(Node start, Node target){
     
     ![](./algos_notes/algo_bs3.png)
     ![](./algos_notes/algo_bs5.png)
+    
     1. 初始：$l$ 指向蓝色区域，$r$ 指向红色区域
     2. 循环：$l$、$r$ 快速向蓝红边界逼近，**保持 $l$、$r$ 颜色不改变**
     3. 结束：$l$ 指向蓝色边界，$r$ 指向红色边界，根据题意返回 $l$ 或者 $r$
