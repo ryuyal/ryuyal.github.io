@@ -772,7 +772,7 @@ int BFS(Node start, Node target){
 - Example
     ![](./algos_notes/algo_bs1.png)
     
-    ### 找到红蓝边界
+    **找到红蓝边界**
     
     ![](./algos_notes/algo_bs2.png)
     
@@ -783,7 +783,7 @@ int BFS(Node start, Node target){
     3. 结束：$l$ 指向蓝色边界，$r$ 指向红色边界，根据题意返回 $l$ 或者 $r$
    
    💡 时间复杂度：$O(logn)$
-   
+
   - 数组下标从 $0-(N-1)$，`l`初始值为$-1$，`r`初始值为$N$
   - $m=l+(r-l)/2$，$m$的最小值为$0$，最大值为$N-1$
   
