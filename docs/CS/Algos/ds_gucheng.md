@@ -751,9 +751,56 @@ int BFS(Node start, Node target){
 
 ### DFS
 
+![](./algos_notes/algo_dfs1.png)
+
+**dfs一般使用场景：**
+
+1. 模板dfs，mask举例dfs
+2. 外部空间dfs（用stack携程iterative way，eg: tree traversal）
+3. dfs+memo（dp剪枝）
+4. 使用在模拟流程，寻找所有情况全排列解
+
+... 
+
 ---
 
 ### 二分搜索
+[二分查找为什么总是写错？](https://www.bilibili.com/video/BV1d54y1q7k7/?share_source=copy_web&vd_source=ebbd87b81a8db173b6fdf32f106f9812)
+
+💡 对于二分查找问题，计算中间下标mid的方法：`mid = left + (right - left) / 2`，因为 `mid = (left + right) / 2` 可能会导致整型溢出
+
+- Example
+    ![](./algos_notes/algo_bs1.png)
+    
+    ### 找到红蓝边界
+    
+    ![](./algos_notes/algo_bs2.png)
+    
+    ![](./algos_notes/algo_bs3.png)
+    ![](./algos_notes/algo_bs5.png)
+    1. 初始：$l$ 指向蓝色区域，$r$ 指向红色区域
+    2. 循环：$l$、$r$ 快速向蓝红边界逼近，**保持 $l$、$r$ 颜色不改变**
+    3. 结束：$l$ 指向蓝色边界，$r$ 指向红色边界，根据题意返回 $l$ 或者 $r$
+   
+   💡 时间复杂度：$O(logn)$
+   
+  - 数组下标从 $0-(N-1)$，`l`初始值为$-1$，`r`初始值为$N$
+  - $m=l+(r-l)/2$，$m$的最小值为$0$，最大值为$N-1$
+  
+    ![](./algos_notes/algo_bs4.jpg)
+
+**模板：**
+```
+    left = -1, right = N
+    while(left + 1 != right){
+        mid = left + (right-left)/2
+        if isBlue(mid)
+            left = mid
+        else
+            right = mid
+    }
+    return left or right
+```
 
 ---
 
