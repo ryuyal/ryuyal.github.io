@@ -765,6 +765,51 @@ int BFS(Node start, Node target){
 ---
 
 ### 二分搜索
+**三种模板：**
+
+```
+start = 0;
+end = len-1;
+while(start + 1 < end){
+    mid = start + (end-start)/2;
+    if(nums[mid] < target){
+        start = mid;
+    }else{
+        end = mid;
+    }
+}
+// (start, end)
+```
+
+```
+start = 0;
+end = len;
+while(start < end){
+    mid = start + (end-start)/2;
+    if(nums[mid] < target){
+        start = mid + 1;
+    }else{
+        end = mid;
+    }
+}
+// start == end
+```
+
+```
+start = 0;
+end = len-1;
+while(start <= end){
+    mid = start + (end-start)/2;
+    if(nums[mid] < target){
+        start = mid + 1;
+    }else{
+        end = mid - 1;
+    }
+}
+// (end, start)
+```
+
+
 [二分查找为什么总是写错？](https://www.bilibili.com/video/BV1d54y1q7k7/?share_source=copy_web&vd_source=ebbd87b81a8db173b6fdf32f106f9812)
 
 💡 对于二分查找问题，计算中间下标mid的方法：`mid = left + (right - left) / 2`，因为 `mid = (left + right) / 2` 可能会导致整型溢出
