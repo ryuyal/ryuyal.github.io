@@ -100,6 +100,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: 切换至日间模式
+  titles_only: true
   features:
     - navigation.tabs # 使用Tab来进行分类（导航栏）
     # - navigation.tabs.sticky # 使用Tab来进行分类，并且导航栏固定
@@ -141,8 +142,8 @@ markdown_extensions:
   - toc:
       permalink: true # 固定标题位置为当前位置
   - pymdownx.highlight: # 代码块高亮
-      # linenums: true # 显示行号
-      # auto_title: true # 显示编程语言名称
+      linenums: true # 显示行号
+      auto_title: true # 显示编程语言名称
   - pymdownx.superfences # 代码块高亮插件
   - meta # 支持Markdown文件上方自定义标题标签等
   - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
