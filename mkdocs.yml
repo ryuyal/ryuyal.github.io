@@ -128,21 +128,21 @@ extra:
       link: https://github.com/ryuyal
       name: GitHub | RyuYal
 
-  analytics: 
-    feedback:
-      title: Was this page helpful?
-      ratings:
-        - icon: material/thumb-up-outline
-          name: This page was helpful
-          data: 1
-          note: >-
-            Thanks for your feedback!
-        - icon: material/thumb-down-outline
-          name: This page could be improved
-          data: 0
-          note: >- 
-            Thanks for your feedback! Help us improve this page by
-            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+  # analytics: 
+  #   feedback:
+  #     title: Was this page helpful?
+  #     ratings:
+  #       - icon: material/thumb-up-outline
+  #         name: This page was helpful
+  #         data: 1
+  #         note: >-
+  #           Thanks for your feedback!
+  #       - icon: material/thumb-down-outline
+  #         name: This page could be improved
+  #         data: 0
+  #         note: >- 
+  #           Thanks for your feedback! Help us improve this page by
+  #           using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 
 
 # [Extensions]
@@ -153,8 +153,8 @@ plugins:
         - en
         - ja
   - tags # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
-  - blog:
-    post_date_format: medium
+  # - blog:
+  #   post_date_format: medium
 markdown_extensions:
   - pymdownx.arithmatex: # latex支持
       generic: true
@@ -178,6 +178,6 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # https://cdn.bytedance.com/?query=mathjax&version=3.2.0
 extra_css:
-  # - mkdocs/css/no-footer.css # 不使用底部的翻页
+  - mkdocs/css/no-footer.css # 不使用底部的翻页
   - mkdocs/css/unordered-list-symbols.css # multiplt unordered list symbols
 

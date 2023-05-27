@@ -535,13 +535,13 @@ class DSU{
 
 **单链表**
 ```
-    class ListNode{
-        int val;
-        ListNode next;
-        ListNode(int val){
-            this.val = val;
-        }
+class ListNode{
+    int val;
+    ListNode next;
+    ListNode(int val){
+        this.val = val;
     }
+}
 ```
 
 **双向链表**
