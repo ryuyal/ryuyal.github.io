@@ -20,7 +20,11 @@ nav:
       - Cpp-CLion: CS/Tools/clion.md
       - VSCode: CS/Tools/vscode.md
       - 科研相关: CS/Tools/research.md
-    
+      
+    - CPP:
+      - 学习资源: CS/CPP/basic.md
+      - Must Known: CS/CPP/cppknowledge.md
+
     - 数据结构与算法:
       - UC Berkeley CS61B: CS/Algos/cs61b.md 
       - 数据结构与算法基础-青岛大学王卓老师: CS/Algos/ds_wangzhuo.md
