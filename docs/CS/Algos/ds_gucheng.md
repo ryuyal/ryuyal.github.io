@@ -25,7 +25,7 @@
 > 适用场景：频繁查询，对存储空间要求不大，很少增加和删除的情况。
 
 - 基本操作：
-    ```
+    ```Java
     //打印数组
     int[]nums = new int[10];
     System.out.println(Arrays.toString(nums));
@@ -37,7 +37,7 @@
 - non-primitive type指的是：String, Arrays, Classes, Interfaces
 
 - 常用method:
-    ```
+    ```Java
     str.substring();
     str.charAt(index);
     str1.compareTo(str2);
@@ -47,7 +47,7 @@
 ### Linked List链表
 
 - 常用method，赋值取值时间复杂度均为 O(1)
-    ```
+    ```Java
     ListNode head = new ListNode(0); // 初始化
     head.next = new ListNode(1); // 赋值
     head.val; // 取值
@@ -59,7 +59,7 @@
 ### Tree树
 
 - Binary Tree: 
-    ```
+    ```Java
     class TreeNode{
         TreeNode left;
         TreeNode right;
@@ -77,7 +77,7 @@
 3. 任意节点的所有子节点所包含的字符都不相同
 
 - 基础method:
-    ```
+    ```Java
     addWord()
     searchWord()
     searchPrefix()
@@ -99,7 +99,7 @@
 > `Stack<Integer> stack = new Stack<>();` 也可
 
 - 常用method，时间复杂度均为O(1)
-    ```
+    ```Java
     stack.push(num)
     stack.peek()
     stack.pop()
@@ -113,7 +113,7 @@
 > `Queue<Integer> queue = new LinkedList<>();`
 
 - 常用方法，时间复杂度均为O(1)。相比 `add` 和 `remove` 方法，更推荐 `offer` 和 `poll` 方法进行添加和删除的操作（可以处理空的操作）。
-    ```
+    ```Java
     queue.offer(1);
     queue.offer(2);
     queue.poll();
@@ -129,7 +129,7 @@
 > `Deque<Integer> deque = new LinkedList<>();`
 
 - 常用方法，时间复杂度均为O(1)
-    ```
+    ```Java
     deque.offerLast(1); // 1
     deque.addLast(2); // 1->2
     deque.offerFirst(0); // 0->1->2
@@ -146,7 +146,7 @@
 > 初始化 `PriorityQueue<Integer> pq = new PriorityQueue<>();`
 
 - 常用方法
-    ```
+    ```Java
     pq.offer(2); // 时间复杂度O(logn)
     pq.add(0); // 时间复杂度O(logn) 
     pq.add(1);
@@ -155,7 +155,7 @@
     pq.poll(); // return 1, 时间复杂度O(logn)
     ```
 
-    ```
+    ```Java
     /*
     自定义排序规则的优先队列
     (1) 按单词出现频率从大到小排列
@@ -183,7 +183,7 @@
 > 初始化 `Map<String, Integer> map = new HashMap<>();`
 
 - 常用方法，添加和查找时间复杂度为O(1)
-    ```
+    ```Java
     map.put("A", 0);
     map.put("B", 1);
     map.put("C", 2);
@@ -206,7 +206,7 @@
 > 初始化 `Set<Integer> set = new HashSet<>();`
 
 - 常用方法 时间复杂度O(1)
-    ```
+    ```Java
     set.add(1);
     set.add(2);
     set.contains(1); // return true
@@ -219,7 +219,7 @@
 > 和HashMap用法几乎一致，但是提供了key本身有顺序，可以对元素进行排序操作
 
 - 常用方法，时间复杂度O(logn)
-    ```
+    ```Java
     put(key, value)
     lowerKey() // <
     floorKey() // <=
@@ -233,7 +233,7 @@
 > 几乎和HashSet一样，唯一区别是element现在有顺序了
 
 - 常用方法
-    ```
+    ```Java
     first(); // 返回最小的元素
     lower(num);
     floor(num);
@@ -259,7 +259,7 @@
 图的表示主要有两种方式：
 
 - 邻接表：
-    ``` 
+    ```Java 
     // 方式一
     List[] graph = new ArrayList[4];
     for(int i = 0; i < graph.length; i++){
@@ -284,7 +284,7 @@
     ```
 
 - 邻接矩阵：
-    ```
+    ```Java
     boolean[][] graph3 = new boolean[4][4];
     for (int i = 0; i < 4; i++){
         graph3[i][i] = true;
@@ -323,7 +323,7 @@
 ### Trie
 
 **模板：**
-```
+```Java
 class TrieNode{
     TrieNode[] children;
     boolean isWord;
@@ -379,7 +379,7 @@ class Trie{
 ![](./ds_notes/ds_unionfind.jpg)
 
 **模板：**
-```
+```Java
 class DSU{
     int[] parent;
     public DSU(int N){
@@ -407,7 +407,7 @@ class DSU{
 **Improved with size(weighted)**——节点数少的树合并到节点数多的树上
     ![](./ds_notes/ds_unionfind2.jpg)
 
-```
+```Java
 class DSU{
     int[] parent;
     int[] size; // 当前Node所在的group所包含的节点数
@@ -451,7 +451,7 @@ class DSU{
 **Improved with ranked**——高度低的树祥高度高的树合并
     ![](./ds_notes/ds_unionfind3.jpg)
 
-```
+```Java
 class DSU{
     int[] parent;
     int[] rank; // 
@@ -534,7 +534,7 @@ class DSU{
 - 核心操作：插入、删除、查找（遍历）
 
 **单链表**
-```
+```Java
 class ListNode{
     int val;
     ListNode next;
@@ -545,7 +545,7 @@ class ListNode{
 ```
 
 **双向链表**
-```
+```Java
 class ListNode{
     int val;
     ListNode next;
@@ -558,7 +558,7 @@ class ListNode{
 
 
 1. 常用reverse linkedlist的method，recursive or iterative
-    ```
+    ```Java
     public ListNode reverseLsit(ListNode head){
         ListNode newHead = null;
         ListNode cur = head;
@@ -573,7 +573,7 @@ class ListNode{
     ```
 
 2. 链表找环的基本方式
-    ```
+    ```Java
     public ListNode detectCycle(ListNode head){
         ListNode slow = head;
         ListNode fast = head;
@@ -612,7 +612,7 @@ Java中，对集合对象或者数组对象排序，有两种实现方式：
 1. 对象实现Comparable接口
 2. 定义**比较器**，实现Comparator接口。
 
-    ```
+    ```Java
     class Person implements Comparable<Person>{
         @Override
         public int compareTo(Person person){
@@ -622,7 +622,7 @@ Java中，对集合对象或者数组对象排序，有两种实现方式：
     }
     ```
 
-    ```
+    ```Java
     Collections.sort(people, new Comparator<Person>(){
         @Override
         public int compare(Person a, Person b){
@@ -681,7 +681,7 @@ Java中，对集合对象或者数组对象排序，有两种实现方式：
 
 ![](./algos_notes/algo_bfs2.png)
 
-```
+```Java
 procedure BFS(G, v):
     create a queue Q
     enqueue v onto Q
@@ -697,7 +697,7 @@ procedure BFS(G, v):
                 enqueue u onto Q
 ```
 
-```
+```Java
 // 计算从起点 start 到终点 target的最近距离
 int BFS(Node start, Node target){
     Queue<Node> q; // 核心数据结构
@@ -767,7 +767,7 @@ int BFS(Node start, Node target){
 ### 二分搜索
 **三种模板：**
 
-```
+```Java
 start = 0;
 end = len-1;
 while(start + 1 < end){
@@ -781,7 +781,7 @@ while(start + 1 < end){
 // (start, end)
 ```
 
-```
+```Java
 start = 0;
 end = len;
 while(start < end){
@@ -795,7 +795,7 @@ while(start < end){
 // start == end
 ```
 
-```
+```Java
 start = 0;
 end = len-1;
 while(start <= end){
@@ -836,7 +836,7 @@ while(start <= end){
     ![](./algos_notes/algo_bs4.jpg)
 
 **模板：**
-```
+```Java
     left = -1, right = N
     while(left + 1 != right){
         mid = left + (right-left)/2
