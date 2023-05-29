@@ -16,8 +16,9 @@ nav:
       - MarkDown: CS/Tools/markd.md
       - Git: CS/Tools/git.md
       - GitHub: CS/Tools/github.md
-      - Java-IDEA: CS/Tools/idea.md
       - Cpp-CLion: CS/Tools/clion.md
+      - Golang-GoLand: CS/Tools/goland.md
+      - Java-IDEA: CS/Tools/idea.md
       - VSCode: CS/Tools/vscode.md
       - 科研相关: CS/Tools/research.md
       
