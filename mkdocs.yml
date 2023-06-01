@@ -17,7 +17,7 @@ nav:
       - Git: CS/Tools/git.md
       - GitHub: CS/Tools/github.md
       - Cpp-CLion: CS/Tools/clion.md
-      - Golang-GoLand: CS/Tools/goland.md
+      - Go-GoLand: CS/Tools/goland.md
       - Java-IDEA: CS/Tools/idea.md
       - VSCode: CS/Tools/vscode.md
       - 科研相关: CS/Tools/research.md
@@ -75,9 +75,9 @@ nav:
       - 足球规则: HOBBY/Soccer/soccer-rules.md
 
   - 关于我:
-    - ME/index.md
+    - ME/index.mdr
     - 个人履历: ME/cv-full.md
-    - 一些记录: ME/some_recod/2023.md
+    - 一些记录: ME/some_record/2023.md
     # - 支持作者: ME/support.md
 
   - 网站:
