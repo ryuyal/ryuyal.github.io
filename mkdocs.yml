@@ -79,7 +79,7 @@ nav:
       - 足球规则: HOBBY/Soccer/soccer-rules.md
 
   - 关于我:
-    - ME/index.mdr
+    - ME/index.md
     - 个人履历: ME/cv-full.md
     - 一些记录: ME/some_record/2023.md
     # - 支持作者: ME/support.md
