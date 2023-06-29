@@ -61,3 +61,26 @@ Create Associations 设置为一些文件的默认打开方式
 4. 新建文件并编写代码
 5. 配置CMakeLists.txt
 6. Git$\rightarrow$Add$\rightarrow$Commit$\rightarrow$Push
+
+## CLion中创建C/C++文件添加模板代码
+
+`File -> Settings -> Editor -> File and Code Templates`，在中间`Includes `选项卡中选择**C File Header**，添加代码如下：
+
+    ```C++
+    #if ($HEADER_COMMENTS)
+    //
+    // Created by $USER_NAME on ${DATE}.
+    #if ($ORGANIZATION_NAME && $ORGANIZATION_NAME != "")
+    // Copyright (c) $YEAR ${ORGANIZATION_NAME}#if (!$ORGANIZATION_NAME.endsWith(".")).#end All rights reserved.
+    #end
+    // Description:     
+    //
+    #end
+
+    #[[#include]]# <iostream>
+    using namespace std;
+
+    int main(){
+
+    }
+    ```
