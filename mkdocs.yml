@@ -36,6 +36,7 @@ nav:
       - 数据结构刷题入门: CS/Algos/ds_gucheng.md
       - LeetCode: CS/Algos/lc_recommend.md
       - 动态规划: CS/Algos/dynamic_programming.md
+      - 滑动窗口: CS/Algos/sliding_window.md
     
     - 操作系统:
       - 深入理解计算机系统-CSAPP: CS/OS/computer_system.md
