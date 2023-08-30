@@ -28,8 +28,8 @@ title: 网站构建说明
     mkdocs new ryuyal.github.io
     ```
 将在当前目录下创建名为 ryuyal.github.io 的新目录，其中包含默认的 MkDocs 配置文件 mkdocs.yml 和样例文档 docs/index.md
-- 可以选择用 VSCode 打开 mkdocs-site
-- 在 terminal 中切换到 mkdocs-site 目录下，执行：
+- 可以选择用 VSCode 打开 ryuyal.github.io
+- 在 terminal 中切换到该目录下，执行：
 ```
 mkdocs serve
 ```
