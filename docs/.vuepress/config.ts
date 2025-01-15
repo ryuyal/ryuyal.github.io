@@ -2,6 +2,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
 
+// 如果是发布到仓库base，需要将下面设置为：base: '/'
 export default defineUserConfig({
   base: '/',
   lang: 'zh-CN',
