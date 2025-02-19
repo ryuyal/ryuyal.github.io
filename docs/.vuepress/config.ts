@@ -13,6 +13,15 @@ export default defineUserConfig({
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
 
   theme: plumeTheme({
+    profile: {
+      name: 'GrowMe',
+      description: '悟已往之不谏，知来者之可追。',
+      avatar: '/avatar/avatar.jpg',
+      location: 'China',
+      // organization: '您的',
+      circle: true, // 是否为圆形头像
+      layout: 'right', // 个人信息在左侧还是右侧，'left' | 'right'
+    },
     /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
     // hostname: 'https://your_site_url',
 

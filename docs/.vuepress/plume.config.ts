@@ -6,12 +6,14 @@ import { notes } from './notes'
  * @see https://theme-plume.vuejs.press/config/basic/
  */
 export default defineThemeConfig({
-  logo: 'https://theme-plume.vuejs.press/plume.png',
+  // logo: 'https://theme-plume.vuejs.press/plume.png',
+    // logo: 'https://ryuyal.github.io/picx-images-hosting/initial-img/avatar.2dotrtkciz.jpg',
+    logo: '/avatar/avatar.jpg', //public文件夹下
 
   appearance: true,  // 配置 深色模式
 
   social: [
-    { icon: 'github', link: '/' },
+    { icon: 'github', link: 'https://github.com/ryuyal' },
   ],
   // navbarSocialInclude: ['github'], // 允许显示在导航栏的 social 社交链接
   // aside: true, // 页内侧边栏， 默认显示在右侧
@@ -37,10 +39,10 @@ export default defineThemeConfig({
    * @see https://theme-plume.vuejs.press/config/basic/#profile
    */
   profile: {
-    avatar: 'https://theme-plume.vuejs.press/plume.png',
+    avatar: '/avatar/avatar.jpg',
     name: 'Grow Me',
     description: 'My Learning Journey',
-    // circle: true,
+    circle: true,
     // location: '',
     // organization: '',
   },
@@ -65,5 +67,7 @@ export default defineThemeConfig({
   //   postList: true,    // 启用 博客文章列表过渡动画
   //   appearance: 'fade',  // 启用 深色模式切换过渡动画, 或配置过渡动画类型
   // },
-
+  editLinkText: '在Github上编辑此页',
+  footer: {copyright: 'Copyright @ 2025-present GrowMe'},
+  externalLinkIcon: false,
 })
