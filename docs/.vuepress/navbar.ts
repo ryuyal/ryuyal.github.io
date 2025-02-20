@@ -42,6 +42,7 @@ export const navbar = defineNavbarConfig([
     icon: "mdi:more-circle-outline",
     items: [
       { text: '面试题目', link: '/notes/more/interview/README.md', icon: "clarity:talk-bubbles-line" },
+      { text: '阅读', link: '/notes/more/books/README.md', icon: "mdi:book-open-variant" },
       { text: 'AIGC', link: '/notes/more/aigc_note/README.md', icon: "mdi:robot-outline" },
       { text: '工具', link: '/notes/more/tools_note/README.md', icon: "mdi:toolbox" },
       { text: '站点导航', link: '/notes/more/website_nav/README.md', icon: "mdi:compass" },

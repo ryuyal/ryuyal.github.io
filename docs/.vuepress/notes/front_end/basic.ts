@@ -1,8 +1,8 @@
 import { defineNoteConfig } from 'vuepress-theme-plume'
 
 export default defineNoteConfig({
-    dir: 'cs_basic/ds_algo',
-    link: '/ds_algo/',
+    dir: 'front_end/basic',
+    link: '/front_end_basic/',
     sidebar: [
         '',
         {
@@ -13,17 +13,25 @@ export default defineNoteConfig({
             items: 'auto',
         },
         {
-            dir: 'datastructure',
-            text: '数据结构',
-            icon: 'mdi-file-tree',
+            dir: 'html',
+            text: 'HTML',
+            icon: 'mdi-language-html5',
             collapsed: false,
             items: 'auto',
         },
         {
-            dir: 'algorithms',
-            text: '算法',
+            dir: 'CSS',
+            text: 'CSS',
             // icon: 'carbon:chart-relationship',
-            icon:'mdi-function-variant',
+            icon:'mdi-language-css3',
+            collapsed: false,
+            items: 'auto',
+        },
+        {
+            dir: 'JavaScript',
+            text: 'JavaScript',
+            // icon: 'carbon:chart-relationship',
+            icon:'mdi-language-javascript',
             collapsed: false,
             items: 'auto',
         }
