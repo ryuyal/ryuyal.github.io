@@ -4,6 +4,7 @@ import network from './notes/cs_basic/network.ts'
 import operatingSystem from './notes/cs_basic/operating_system.ts'
 import frontEndBasic from './notes/front_end/basic.ts'
 import interview from './notes/more/interview.ts'
+import javalang from './notes/back_end/java_lang.ts'
 // const demoNote = defineNoteConfig({
 //   dir: 'demo',
 //   link: '/demo',
@@ -20,5 +21,6 @@ export const notes = defineNotesConfig({
     operatingSystem,
     frontEndBasic,
     interview,
+    javalang,
   ],
 })
