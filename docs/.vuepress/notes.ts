@@ -5,6 +5,7 @@ import operatingSystem from './notes/cs_basic/operating_system.ts'
 import frontEndBasic from './notes/front_end/basic.ts'
 import interview from './notes/more/interview.ts'
 import javalang from './notes/back_end/java_lang.ts'
+import spring from './notes/back_end/spring.ts'
 // const demoNote = defineNoteConfig({
 //   dir: 'demo',
 //   link: '/demo',
@@ -22,5 +23,6 @@ export const notes = defineNotesConfig({
     frontEndBasic,
     interview,
     javalang,
+    spring,
   ],
 })
